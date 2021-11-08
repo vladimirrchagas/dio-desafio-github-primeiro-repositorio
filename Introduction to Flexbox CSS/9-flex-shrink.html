@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-9.css">
+    <title>Fundamentos - Flex Shrink</title>
+</head>
+<body>
+    <h2>flex-shrink: 1</h2>
+    <div class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">B</div>
+        <div class="item s-1 fg-1">C</div>
+        <div class="item s-1 fg-1">D</div>
+        <div class="item s-1 fg-1">E</div>
+    </div>
+
+    <div class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">Bora Brasilllllllll fazer golll</div>
+        <div class="item s-1 fg-1">C</div>
+        <div class="item s-1 fg-1">D</div>
+        <div class="item s-1 fg-1">E</div>
+    </div>
+
+    <h2>flex-shrink: 0 / basis: 100px</h2>
+    <div class="flex-container">
+        <div class="item s-0 fg-1">A</div>
+        <div class="item s-0 fg-1">B</div>
+        <div class="item s-0 fg-1">C</div>
+        <div class="item s-0 fg-1">D</div>
+        <div class="item s-0 fg-1">E</div>
+    </div>
+
+    <h2>flex-shrink: mix / basis: 100px</h2>
+    <div class="flex-container">
+        <div class="item s-0 fg-1">A</div>
+        <div class="item s-1 fg-1">B</div>
+        <div class="item s-2 fg-1">C</div>
+        <div class="item s-3 fg-1">D</div>
+        <div class="item s-0 fg-1">E</div>
+    </div>
+</body>
+</html>
