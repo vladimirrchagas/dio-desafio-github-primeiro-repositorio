@@ -1,5 +1,5 @@
-# Repositório do Desafio de Projeto sobre Git/GitHub da DIO
-Repositório criado para o Desafio de Projeto
+# Repositório do Impulse Bootcamp
+Repositório criado para o Impulse Bootcamp
 
 ## Links Úteis
 [Sintaxe Básica Markdown](https://markdownguide.org/basic-syntax/)
