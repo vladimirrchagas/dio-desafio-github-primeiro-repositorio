@@ -1,0 +1,3 @@
+Link to get movies images: The Movie db -> https://www.themoviedb.org/movie
+Link to get icons: Font Awesome -> https://fontawesome.com/
+Link to carousel JQuery: Owl Carousel -> https://owlcarousel2.github.io/OwlCarousel2/
