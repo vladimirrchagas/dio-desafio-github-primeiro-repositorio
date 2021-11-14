@@ -4,11 +4,21 @@ import Slider from 'react-slick';
 export const Wraper = styled.div`
     display: flex;
     flex-direction: row;
+    *::-webkit-scrollbar {
+        width: 5px;
+        cursor: pointer;
+    }
+    
+    *::-webkit-scrollbar-thumb {
+        background-color: ${(props) => props.theme.colors.primary};
+        border-radius: 20px;
+       
+    }
 `;
 
 export const Container = styled.aside`
     background-color: ${(props) => props.theme.colors.background};
-    width: 500px;
+    width: 550px;
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
@@ -36,7 +46,7 @@ export const Map = styled.div`
 
 export const Carousel = styled(Slider)`
     .slick-slide {
-        margin-right: 10px;
+        margin-right: 5px;
     }
 `;
 

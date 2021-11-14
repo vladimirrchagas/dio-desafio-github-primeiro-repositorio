@@ -1,16 +1,27 @@
-import Skeleton from '../Skeleton';
+import LoadingSkeleton from '../Skeleton';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-const Card = styled.div`
+const CardCarousel = styled.div`
     display: flex;
     width: 90px;
     height: 90px;
     border-radius: 6px;
-    background-image: url(${(props) => props.photo});
+    background-image: url(${({ photo }) => photo});
     background-size: cover;
     padding: 10px;
     justify-content: center;
+`;
+
+const CardRestaurant = styled.div`
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 6px;
+    background-image: url(${({ photo }) => photo});
+    background-size: cover;
+    justify-content: center;
+    object-fit: cover;
 `;
 
 const Title = styled.span`
@@ -19,8 +30,11 @@ const Title = styled.span`
     font-size: 16px;
 `;
 
-const ImageCard = ({ photo, title }) => {
+const ImageCard = ({ restaurant, local }) => {
 const [imageLoaded, setImageLoaded] = useState(false);
+
+    const photo = restaurant.photos ? restaurant.photos[0].getUrl() : restaurant.icon;
+    const title = restaurant.name;
 
     useEffect(() => {
         const imageLoader = new Image();
@@ -31,11 +45,15 @@ const [imageLoaded, setImageLoaded] = useState(false);
     return (
         <>
         {imageLoaded ? (
-            <Card photo={photo}>
-                <Title>{title}</Title>
-            </Card>
+            local === "restaurant-card" ? (
+                <CardRestaurant photo={photo}/>
+            ) : (
+                <CardCarousel photo={photo}>
+                    <Title>{title}</Title>
+                </CardCarousel>
+            )
         ) : (
-            <Skeleton width='90px' height='90px' />
+            <LoadingSkeleton width='90px' height='90px' />
         )}
         </>
     );

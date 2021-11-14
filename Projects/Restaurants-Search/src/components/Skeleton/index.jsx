@@ -10,13 +10,19 @@ const KeyFrameLoading = keyframes`
     }
 `;
 
-const LoadingSkeleton = styled.div`
+const Skeleton = styled.div`
     background-color: gray;
     border-radius: 6px;
     margin-bottom: 10px;
-    min-width: ${(props) => props.width}
-    height: ${(props) => props.height}
+    min-width: ${({ width }) => width}
+    height: ${(height) => height}
     animation: ${KeyFrameLoading} 500ms infinite alternate;
 `;
 
-export default ({ width, height}) => <LoadingSkeleton width={width} height={height} />;
+const LoadingSkeleton = ({ width, height}) => {
+    return (
+        <Skeleton width={width} height={height} />
+    )
+}
+
+export default LoadingSkeleton;

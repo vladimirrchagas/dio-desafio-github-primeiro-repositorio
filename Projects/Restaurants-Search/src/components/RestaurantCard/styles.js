@@ -4,7 +4,7 @@ export const Restaurant = styled.div`
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    margint-top: 20px;
+    margin-top: 5px;
     padding: 16px;
     background-color: #fff;
     border-left: 5px solid transparent;
@@ -38,7 +38,7 @@ export const Address = styled.span`
 `;
 
 export const RestaurantPhoto = styled.img`
-    display: ${(props) => (props.imageLoaded ? 'block' : 'none')}
+    display: ${({ imageLoaded }) => (imageLoaded ? 'block' : 'block')}
     width: 100px;
     height: 100px;
     border-radius: 6px;
