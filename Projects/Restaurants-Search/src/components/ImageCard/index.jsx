@@ -15,8 +15,8 @@ const CardCarousel = styled.div`
 
 const CardRestaurant = styled.div`
     display: block;
-    width: 90px;
-    height: 90px;
+    min-width: 100px;
+    height: 100px;
     border-radius: 6px;
     background-image: url(${({ photo }) => photo});
     background-size: cover;
@@ -27,7 +27,7 @@ const CardRestaurant = styled.div`
 const Title = styled.span`
     font-family: ${(props) => props.theme.fonts.regular};
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
 `;
 
 const ImageCard = ({ restaurant, local }) => {

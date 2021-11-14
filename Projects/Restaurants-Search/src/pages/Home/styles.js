@@ -5,14 +5,13 @@ export const Wraper = styled.div`
     display: flex;
     flex-direction: row;
     *::-webkit-scrollbar {
-        width: 5px;
+        width: 8px;
         cursor: pointer;
     }
     
     *::-webkit-scrollbar-thumb {
         background-color: ${(props) => props.theme.colors.primary};
-        border-radius: 20px;
-       
+        border-radius: 20px;      
     }
 `;
 
@@ -53,10 +52,10 @@ export const Carousel = styled(Slider)`
 export const CarouselTitle = styled.h1`
     font-family: ${(props) => props.theme.fonts.regular};
     color: ${(props) => props.theme.colors.text};
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     line-height: 29px;
-    margin: 10px 0;
+    margin: 5px 0;
 `;
 
 export const ModalTitle = styled.p`

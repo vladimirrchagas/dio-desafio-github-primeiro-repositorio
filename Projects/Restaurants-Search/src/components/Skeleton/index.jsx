@@ -15,7 +15,7 @@ const Skeleton = styled.div`
     border-radius: 6px;
     margin-bottom: 10px;
     min-width: ${({ width }) => width}
-    height: ${(height) => height}
+    min-height: ${(height) => height}
     animation: ${KeyFrameLoading} 500ms infinite alternate;
 `;
 

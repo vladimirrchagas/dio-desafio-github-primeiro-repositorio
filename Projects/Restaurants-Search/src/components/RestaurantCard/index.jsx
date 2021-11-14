@@ -19,7 +19,7 @@ const RestaurantCard = ({ restaurant, onClick }) => {
                 />
                 <Address>{restaurant.vicinity || restaurant.formatted_address}</Address>
             </RestaurantInfo>
-            <ImageCard restaurant={restaurant} local="restaurant-card"/>
+            <ImageCard key={restaurant.placeId} restaurant={restaurant} local="restaurant-card"/>
         </Restaurant>
     );
 };

@@ -31,16 +31,9 @@ export const Title = styled.span`
 export const Address = styled.span`
     font-family: ${(props) => props.theme.fonts.regular};
     color: ${(props) => props.theme.colors.text};
+    width: 70%;
     font-size: 16px;
     line-height: 29px;
     margin-bottom: 10px;
     margin-top: 10px;
-`;
-
-export const RestaurantPhoto = styled.img`
-    display: ${({ imageLoaded }) => (imageLoaded ? 'block' : 'block')}
-    width: 100px;
-    height: 100px;
-    border-radius: 6px;
-    object-fit: cover;
 `;

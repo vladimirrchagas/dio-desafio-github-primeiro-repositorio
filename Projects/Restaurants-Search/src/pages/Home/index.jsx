@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import TextField, { Input } from '@material/react-text-field/dist/index';
-import MaterialIcon from '@material/react-material-icon/dist/index';
+import { MdSearch } from "react-icons/md";
 import { Container, Search, Logo, Wraper, CarouselTitle, Carousel, ModalTitle, ModalContent } from './styles';
 import { ImageCard, RestaurantCard, Modal, MapContainer, Loader, LoadingSkeleton } from '../../components'
 
@@ -69,7 +69,7 @@ const Home = () => {
                     <TextField
                         label='Find Your Restaurant'
                         outlined
-                        trailingIcon={<MaterialIcon role="button" icon="search" />}
+                        trailingIcon={<MdSearch size='20px' color='#6200ee'/>}
                     >
                         <Input
                             value={inputValue}
@@ -89,7 +89,6 @@ const Home = () => {
                             <ModalContent>{restaurantSelected?.formatted_address}</ModalContent>
                             <ModalContent>
                                 {
-                                // console.log(restaurantSelected.opening_hours.isOpen())
                                 restaurantSelected?.opening_hours?.isOpen()
                                     ? 'Aberto Agora :-)'
                                     : 'Fechado Neste Momento :-('
